@@ -13,6 +13,8 @@
 		3C537B2B241DF8EF00A1DB6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C537B29241DF8EF00A1DB6B /* Main.storyboard */; };
 		3C537B2D241DF8F000A1DB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C537B2C241DF8F000A1DB6B /* Assets.xcassets */; };
 		3C537B30241DF8F000A1DB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C537B2E241DF8F000A1DB6B /* LaunchScreen.storyboard */; };
+		3CEECAC92430335100A793C4 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEECAC82430335100A793C4 /* SetViewController.swift */; };
+		3CEECACB243034CD00A793C4 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEECACA243034CD00A793C4 /* Alarm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3C537B2C241DF8F000A1DB6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C537B2F241DF8F000A1DB6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C537B31241DF8F000A1DB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CEECAC82430335100A793C4 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		3CEECACA243034CD00A793C4 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				3C537B23241DF8EF00A1DB6B /* AppDelegate.swift */,
 				3C537B25241DF8EF00A1DB6B /* SceneDelegate.swift */,
 				3C537B27241DF8EF00A1DB6B /* ViewController.swift */,
+				3CEECAC82430335100A793C4 /* SetViewController.swift */,
 				3C537B29241DF8EF00A1DB6B /* Main.storyboard */,
 				3C537B2C241DF8F000A1DB6B /* Assets.xcassets */,
 				3C537B2E241DF8F000A1DB6B /* LaunchScreen.storyboard */,
 				3C537B31241DF8F000A1DB6B /* Info.plist */,
+				3CEECACA243034CD00A793C4 /* Alarm.swift */,
 			);
 			path = morningCall;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C537B28241DF8EF00A1DB6B /* ViewController.swift in Sources */,
+				3CEECAC92430335100A793C4 /* SetViewController.swift in Sources */,
+				3CEECACB243034CD00A793C4 /* Alarm.swift in Sources */,
 				3C537B24241DF8EF00A1DB6B /* AppDelegate.swift in Sources */,
 				3C537B26241DF8EF00A1DB6B /* SceneDelegate.swift in Sources */,
 			);

@@ -14,7 +14,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let <#変数名#> = segue.destination as! SetViewController
+        
+        <#変数名#>.<#値を渡す先の変数名#> = <#渡す値#>
+        
+    }
 
-
+    @IBAction func plusButton(_ sender: Any) {
+        
+    }
+    
 }
 
