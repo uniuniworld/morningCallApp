@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AlarmMailVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let <#変数名#> = segue.destination as! SetViewController
-        
-        <#変数名#>.<#値を渡す先の変数名#> = <#渡す値#>
+//        let <#変数名#> = segue.destination as! SetViewController
+//        
+//        <#変数名#>.<#値を渡す先の変数名#> = <#渡す値#>
         
     }
 

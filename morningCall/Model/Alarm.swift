@@ -16,7 +16,7 @@ class Alarm{
     var secounds = 0
     
     func startTimer(){
-        secounds = calculateInterva
+//        secounds = calculateInterva
     }
     
     

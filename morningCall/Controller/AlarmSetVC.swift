@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetViewController: UIViewController {
+class AlarmSetVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
