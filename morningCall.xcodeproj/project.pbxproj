@@ -19,6 +19,7 @@
 		3CA6BB992434C74800F58CEC /* AudioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6BB982434C74800F58CEC /* AudioVC.swift */; };
 		3CA6BB9C2434D37100F58CEC /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6BB9A2434D37100F58CEC /* RecordingCell.swift */; };
 		3CA6BB9D2434D37100F58CEC /* RecordingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA6BB9B2434D37100F58CEC /* RecordingCell.xib */; };
+		3CA6BB9F243534EB00F58CEC /* CallCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6BB9E243534EB00F58CEC /* CallCenter.swift */; };
 		3CEECAC92430335100A793C4 /* AlarmSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEECAC82430335100A793C4 /* AlarmSetVC.swift */; };
 		3CEECACB243034CD00A793C4 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEECACA243034CD00A793C4 /* Alarm.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		3CA6BB982434C74800F58CEC /* AudioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVC.swift; sourceTree = "<group>"; };
 		3CA6BB9A2434D37100F58CEC /* RecordingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
 		3CA6BB9B2434D37100F58CEC /* RecordingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingCell.xib; sourceTree = "<group>"; };
+		3CA6BB9E243534EB00F58CEC /* CallCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCenter.swift; sourceTree = "<group>"; };
 		3CEECAC82430335100A793C4 /* AlarmSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetVC.swift; sourceTree = "<group>"; };
 		3CEECACA243034CD00A793C4 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			children = (
 				3CEECACA243034CD00A793C4 /* Alarm.swift */,
 				3CA6BB962434C61A00F58CEC /* Audio.swift */,
+				3CA6BB9E243534EB00F58CEC /* CallCenter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				3C537B28241DF8EF00A1DB6B /* AlarmMainVC.swift in Sources */,
 				3CEECAC92430335100A793C4 /* AlarmSetVC.swift in Sources */,
 				3CA6BB992434C74800F58CEC /* AudioVC.swift in Sources */,
+				3CA6BB9F243534EB00F58CEC /* CallCenter.swift in Sources */,
 				3CA6BB9C2434D37100F58CEC /* RecordingCell.swift in Sources */,
 				3CEECACB243034CD00A793C4 /* Alarm.swift in Sources */,
 				3C537B24241DF8EF00A1DB6B /* AppDelegate.swift in Sources */,

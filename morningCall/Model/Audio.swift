@@ -15,7 +15,7 @@ class Audio {
     
     init() {}
     
-    func setUpAudioRecorder() {
+    func setupAudioRecorder() {
         
         let session = AVAudioSession.sharedInstance()
         
@@ -36,7 +36,7 @@ class Audio {
         }
     }
     
-    func setUpAudioPlayer() {
+    func setupAudioPlayer() {
         
         let url = getAudioFileUrl()
 
