@@ -15,6 +15,10 @@
 		3C537B2B241DF8EF00A1DB6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C537B29241DF8EF00A1DB6B /* Main.storyboard */; };
 		3C537B2D241DF8F000A1DB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C537B2C241DF8F000A1DB6B /* Assets.xcassets */; };
 		3C537B30241DF8F000A1DB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C537B2E241DF8F000A1DB6B /* LaunchScreen.storyboard */; };
+		3CA6BB972434C61A00F58CEC /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6BB962434C61A00F58CEC /* Audio.swift */; };
+		3CA6BB992434C74800F58CEC /* AudioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6BB982434C74800F58CEC /* AudioVC.swift */; };
+		3CA6BB9C2434D37100F58CEC /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6BB9A2434D37100F58CEC /* RecordingCell.swift */; };
+		3CA6BB9D2434D37100F58CEC /* RecordingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA6BB9B2434D37100F58CEC /* RecordingCell.xib */; };
 		3CEECAC92430335100A793C4 /* AlarmSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEECAC82430335100A793C4 /* AlarmSetVC.swift */; };
 		3CEECACB243034CD00A793C4 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEECACA243034CD00A793C4 /* Alarm.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +34,10 @@
 		3C537B2C241DF8F000A1DB6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C537B2F241DF8F000A1DB6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C537B31241DF8F000A1DB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CA6BB962434C61A00F58CEC /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		3CA6BB982434C74800F58CEC /* AudioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVC.swift; sourceTree = "<group>"; };
+		3CA6BB9A2434D37100F58CEC /* RecordingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
+		3CA6BB9B2434D37100F58CEC /* RecordingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordingCell.xib; sourceTree = "<group>"; };
 		3CEECAC82430335100A793C4 /* AlarmSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetVC.swift; sourceTree = "<group>"; };
 		3CEECACA243034CD00A793C4 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				3CEECACA243034CD00A793C4 /* Alarm.swift */,
+				3CA6BB962434C61A00F58CEC /* Audio.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -58,6 +67,8 @@
 			children = (
 				3C4753B0243349A4009AE8E9 /* AlarmTimeCell.swift */,
 				3C4753B1243349A4009AE8E9 /* AlarmTimeCell.xib */,
+				3CA6BB9A2434D37100F58CEC /* RecordingCell.swift */,
+				3CA6BB9B2434D37100F58CEC /* RecordingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -67,6 +78,7 @@
 			children = (
 				3C537B27241DF8EF00A1DB6B /* AlarmMainVC.swift */,
 				3CEECAC82430335100A793C4 /* AlarmSetVC.swift */,
+				3CA6BB982434C74800F58CEC /* AudioVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,6 +177,7 @@
 				3C537B2D241DF8F000A1DB6B /* Assets.xcassets in Resources */,
 				3C4753B3243349A4009AE8E9 /* AlarmTimeCell.xib in Resources */,
 				3C537B2B241DF8EF00A1DB6B /* Main.storyboard in Resources */,
+				3CA6BB9D2434D37100F58CEC /* RecordingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,9 +191,12 @@
 				3C4753B2243349A4009AE8E9 /* AlarmTimeCell.swift in Sources */,
 				3C537B28241DF8EF00A1DB6B /* AlarmMainVC.swift in Sources */,
 				3CEECAC92430335100A793C4 /* AlarmSetVC.swift in Sources */,
+				3CA6BB992434C74800F58CEC /* AudioVC.swift in Sources */,
+				3CA6BB9C2434D37100F58CEC /* RecordingCell.swift in Sources */,
 				3CEECACB243034CD00A793C4 /* Alarm.swift in Sources */,
 				3C537B24241DF8EF00A1DB6B /* AppDelegate.swift in Sources */,
 				3C537B26241DF8EF00A1DB6B /* SceneDelegate.swift in Sources */,
+				3CA6BB972434C61A00F58CEC /* Audio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

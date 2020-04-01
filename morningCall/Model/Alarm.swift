@@ -9,7 +9,8 @@
 import Foundation
 import AVFoundation
 
-class Alarm{
+class Alarm {
+    
     var selectedWakeUpTime: Date?
     var aoudioPlayer: AVAudioPlayer!
     var sleepTimer: Timer?
