@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import UserNotifications
 
-class AlarmMailVC: UIViewController {
+class AlarmMailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var appDelegate = UIApplication.shared
+    @IBOutlet weak var tableView: UITableView!
+    var userDefaults = UserDefaults.standard
+    var index = 0
+    
+    var timeArray = 
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +29,16 @@ class AlarmMailVC: UIViewController {
 //        <#変数名#>.<#値を渡す先の変数名#> = <#渡す値#>
         
     }
-
-    @IBAction func plusButton(_ sender: Any) {
-        
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    @IBAction func addButton(_ sender: Any) {
+    }
 }
 

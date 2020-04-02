@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zhY-U3-T3t">
-                                <rect key="frame" x="0.0" y="56" width="375" height="199"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="198"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <locale key="locale" localeIdentifier="ja"/>
                             </datePicker>
@@ -89,10 +89,14 @@
                     <navigationItem key="navigationItem" title="Alarm" id="P9M-xR-ryE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3qi-x8-bki">
                             <connections>
+                                <action selector="addButton:" destination="v6C-pW-mvk" id="eQw-2F-QdO"/>
                                 <segue destination="8V6-Ry-rgO" kind="presentation" id="hiA-S6-bdv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="qXI-zH-Gee" id="qxs-Q1-DzO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVg-zM-yvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
