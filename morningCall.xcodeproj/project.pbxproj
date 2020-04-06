@@ -25,6 +25,10 @@
 		3CF11892243B549000E3EED9 /* AlarmTimeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF11891243B549000E3EED9 /* AlarmTimeArray.swift */; };
 		3CF11895243B657C00E3EED9 /* AlarmSnoozeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF11893243B657C00E3EED9 /* AlarmSnoozeCell.swift */; };
 		3CF11896243B657C00E3EED9 /* AlarmSnoozeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF11894243B657C00E3EED9 /* AlarmSnoozeCell.xib */; };
+		3CF11899243BCC9900E3EED9 /* AlarmDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF11897243BCC9900E3EED9 /* AlarmDeleteCell.swift */; };
+		3CF1189A243BCC9900E3EED9 /* AlarmDeleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF11898243BCC9900E3EED9 /* AlarmDeleteCell.xib */; };
+		3CF1189D243BCD4F00E3EED9 /* AlarmAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1189B243BCD4F00E3EED9 /* AlarmAddCell.swift */; };
+		3CF1189E243BCD4F00E3EED9 /* AlarmAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1189C243BCD4F00E3EED9 /* AlarmAddCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		3CF11891243B549000E3EED9 /* AlarmTimeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTimeArray.swift; sourceTree = "<group>"; };
 		3CF11893243B657C00E3EED9 /* AlarmSnoozeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSnoozeCell.swift; sourceTree = "<group>"; };
 		3CF11894243B657C00E3EED9 /* AlarmSnoozeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmSnoozeCell.xib; sourceTree = "<group>"; };
+		3CF11897243BCC9900E3EED9 /* AlarmDeleteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDeleteCell.swift; sourceTree = "<group>"; };
+		3CF11898243BCC9900E3EED9 /* AlarmDeleteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmDeleteCell.xib; sourceTree = "<group>"; };
+		3CF1189B243BCD4F00E3EED9 /* AlarmAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAddCell.swift; sourceTree = "<group>"; };
+		3CF1189C243BCD4F00E3EED9 /* AlarmAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmAddCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,10 @@
 				3C4753B1243349A4009AE8E9 /* AlarmTimeCell.xib */,
 				3CF11893243B657C00E3EED9 /* AlarmSnoozeCell.swift */,
 				3CF11894243B657C00E3EED9 /* AlarmSnoozeCell.xib */,
+				3CF11897243BCC9900E3EED9 /* AlarmDeleteCell.swift */,
+				3CF11898243BCC9900E3EED9 /* AlarmDeleteCell.xib */,
+				3CF1189B243BCD4F00E3EED9 /* AlarmAddCell.swift */,
+				3CF1189C243BCD4F00E3EED9 /* AlarmAddCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,8 +201,10 @@
 				3CF11896243B657C00E3EED9 /* AlarmSnoozeCell.xib in Resources */,
 				3C537B2D241DF8F000A1DB6B /* Assets.xcassets in Resources */,
 				3C4753B3243349A4009AE8E9 /* AlarmTimeCell.xib in Resources */,
+				3CF1189A243BCC9900E3EED9 /* AlarmDeleteCell.xib in Resources */,
 				3C537B2B241DF8EF00A1DB6B /* Main.storyboard in Resources */,
 				3CA6BB9D2434D37100F58CEC /* RecordingCell.xib in Resources */,
+				3CF1189E243BCD4F00E3EED9 /* AlarmAddCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +227,8 @@
 				3C537B24241DF8EF00A1DB6B /* AppDelegate.swift in Sources */,
 				3C537B26241DF8EF00A1DB6B /* SceneDelegate.swift in Sources */,
 				3CA6BB972434C61A00F58CEC /* Audio.swift in Sources */,
+				3CF11899243BCC9900E3EED9 /* AlarmDeleteCell.swift in Sources */,
+				3CF1189D243BCD4F00E3EED9 /* AlarmAddCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

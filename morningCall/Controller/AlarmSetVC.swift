@@ -126,7 +126,7 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     @IBAction func saveButton(_ sender: Any) {
         alarmSet()
-        delegate.AlarmAddVC(alarmAdd: self, alarmTime: alarmTime)
+        delegate.AlarmMainVC(alarmAdd: self, alarmTime: alarmTime)
         dismiss(animated: true, completion: nil)
     }
     
