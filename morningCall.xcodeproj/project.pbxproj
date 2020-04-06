@@ -22,6 +22,9 @@
 		3CA6BB9F243534EB00F58CEC /* CallCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6BB9E243534EB00F58CEC /* CallCenter.swift */; };
 		3CEECAC92430335100A793C4 /* AlarmSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEECAC82430335100A793C4 /* AlarmSetVC.swift */; };
 		3CEECACB243034CD00A793C4 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEECACA243034CD00A793C4 /* Alarm.swift */; };
+		3CF11892243B549000E3EED9 /* AlarmTimeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF11891243B549000E3EED9 /* AlarmTimeArray.swift */; };
+		3CF11895243B657C00E3EED9 /* AlarmSnoozeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF11893243B657C00E3EED9 /* AlarmSnoozeCell.swift */; };
+		3CF11896243B657C00E3EED9 /* AlarmSnoozeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF11894243B657C00E3EED9 /* AlarmSnoozeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		3CA6BB9E243534EB00F58CEC /* CallCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCenter.swift; sourceTree = "<group>"; };
 		3CEECAC82430335100A793C4 /* AlarmSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetVC.swift; sourceTree = "<group>"; };
 		3CEECACA243034CD00A793C4 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		3CF11891243B549000E3EED9 /* AlarmTimeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTimeArray.swift; sourceTree = "<group>"; };
+		3CF11893243B657C00E3EED9 /* AlarmSnoozeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSnoozeCell.swift; sourceTree = "<group>"; };
+		3CF11894243B657C00E3EED9 /* AlarmSnoozeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmSnoozeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 				3CEECACA243034CD00A793C4 /* Alarm.swift */,
 				3CA6BB962434C61A00F58CEC /* Audio.swift */,
 				3CA6BB9E243534EB00F58CEC /* CallCenter.swift */,
+				3CF11891243B549000E3EED9 /* AlarmTimeArray.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -68,10 +75,12 @@
 		3C4753A9243347D9009AE8E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3C4753B0243349A4009AE8E9 /* AlarmTimeCell.swift */,
-				3C4753B1243349A4009AE8E9 /* AlarmTimeCell.xib */,
 				3CA6BB9A2434D37100F58CEC /* RecordingCell.swift */,
 				3CA6BB9B2434D37100F58CEC /* RecordingCell.xib */,
+				3C4753B0243349A4009AE8E9 /* AlarmTimeCell.swift */,
+				3C4753B1243349A4009AE8E9 /* AlarmTimeCell.xib */,
+				3CF11893243B657C00E3EED9 /* AlarmSnoozeCell.swift */,
+				3CF11894243B657C00E3EED9 /* AlarmSnoozeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C537B30241DF8F000A1DB6B /* LaunchScreen.storyboard in Resources */,
+				3CF11896243B657C00E3EED9 /* AlarmSnoozeCell.xib in Resources */,
 				3C537B2D241DF8F000A1DB6B /* Assets.xcassets in Resources */,
 				3C4753B3243349A4009AE8E9 /* AlarmTimeCell.xib in Resources */,
 				3C537B2B241DF8EF00A1DB6B /* Main.storyboard in Resources */,
@@ -197,6 +207,8 @@
 				3CA6BB992434C74800F58CEC /* AudioVC.swift in Sources */,
 				3CA6BB9F243534EB00F58CEC /* CallCenter.swift in Sources */,
 				3CA6BB9C2434D37100F58CEC /* RecordingCell.swift in Sources */,
+				3CF11892243B549000E3EED9 /* AlarmTimeArray.swift in Sources */,
+				3CF11895243B657C00E3EED9 /* AlarmSnoozeCell.swift in Sources */,
 				3CEECACB243034CD00A793C4 /* Alarm.swift in Sources */,
 				3C537B24241DF8EF00A1DB6B /* AppDelegate.swift in Sources */,
 				3C537B26241DF8EF00A1DB6B /* SceneDelegate.swift in Sources */,

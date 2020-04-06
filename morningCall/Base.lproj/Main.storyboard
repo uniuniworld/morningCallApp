@@ -10,13 +10,13 @@
         <!--Add-->
         <scene sceneID="rvk-2V-kJF">
             <objects>
-                <viewController storyboardIdentifier="set" id="AaO-vI-HN5" customClass="AlarmSetVC" customModule="朝電話" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="setAlarm" id="AaO-vI-HN5" customClass="AlarmSetVC" customModule="朝電話" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ej7-OP-pAY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zhY-U3-T3t">
-                                <rect key="frame" x="0.0" y="56" width="375" height="198"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="197"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <locale key="locale" localeIdentifier="ja"/>
                             </datePicker>
@@ -30,9 +30,21 @@
                         <viewLayoutGuide key="safeArea" id="VCk-2k-y7O"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add" id="HHR-3R-eNO">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8V4-Nr-Pcd"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="n6z-7g-hJW"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8V4-Nr-Pcd">
+                            <connections>
+                                <action selector="cancelButton:" destination="AaO-vI-HN5" id="69L-yc-LfY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="n6z-7g-hJW">
+                            <connections>
+                                <action selector="saveButton:" destination="AaO-vI-HN5" id="39R-WV-wNL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="zhY-U3-T3t" id="SvB-lH-ovI"/>
+                        <outlet property="tableView" destination="qFM-L3-9Jl" id="C0N-cG-ORX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP6-va-MNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,7 +84,7 @@
         <!--Alarm-->
         <scene sceneID="AtJ-jU-aXt">
             <objects>
-                <viewController id="v6C-pW-mvk" customClass="AlarmMailVC" customModule="朝電話" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="v6C-pW-mvk" customClass="AlarmMainVC" customModule="朝電話" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g15-6Q-ctB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
