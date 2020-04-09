@@ -72,6 +72,8 @@
 		3C4753A8243347D0009AE8E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3C537B23241DF8EF00A1DB6B /* AppDelegate.swift */,
+				3C537B25241DF8EF00A1DB6B /* SceneDelegate.swift */,
 				3CEECACA243034CD00A793C4 /* Alarm.swift */,
 				3CA6BB962434C61A00F58CEC /* Audio.swift */,
 				3CA6BB9E243534EB00F58CEC /* CallCenter.swift */,
@@ -83,6 +85,8 @@
 		3C4753A9243347D9009AE8E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C537B29241DF8EF00A1DB6B /* Main.storyboard */,
+				3C537B2C241DF8F000A1DB6B /* Assets.xcassets */,
 				3CA6BB9A2434D37100F58CEC /* RecordingCell.swift */,
 				3CA6BB9B2434D37100F58CEC /* RecordingCell.xib */,
 				3C4753B0243349A4009AE8E9 /* AlarmTimeCell.swift */,
@@ -93,6 +97,7 @@
 				3CF11898243BCC9900E3EED9 /* AlarmDeleteCell.xib */,
 				3CF1189B243BCD4F00E3EED9 /* AlarmAddCell.swift */,
 				3CF1189C243BCD4F00E3EED9 /* AlarmAddCell.xib */,
+				3C4753AB2433484E009AE8E9 /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,13 +131,8 @@
 		3C537B22241DF8EF00A1DB6B /* morningCall */ = {
 			isa = PBXGroup;
 			children = (
-				3C4753AB2433484E009AE8E9 /* Controller */,
-				3C4753A9243347D9009AE8E9 /* View */,
 				3C4753A8243347D0009AE8E9 /* Model */,
-				3C537B23241DF8EF00A1DB6B /* AppDelegate.swift */,
-				3C537B25241DF8EF00A1DB6B /* SceneDelegate.swift */,
-				3C537B29241DF8EF00A1DB6B /* Main.storyboard */,
-				3C537B2C241DF8F000A1DB6B /* Assets.xcassets */,
+				3C4753A9243347D9009AE8E9 /* View */,
 				3C537B2E241DF8F000A1DB6B /* LaunchScreen.storyboard */,
 				3C537B31241DF8F000A1DB6B /* Info.plist */,
 			);
