@@ -97,7 +97,6 @@
 				3CF11898243BCC9900E3EED9 /* AlarmDeleteCell.xib */,
 				3CF1189B243BCD4F00E3EED9 /* AlarmAddCell.swift */,
 				3CF1189C243BCD4F00E3EED9 /* AlarmAddCell.xib */,
-				3C4753AB2433484E009AE8E9 /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,8 +132,9 @@
 			children = (
 				3C4753A8243347D0009AE8E9 /* Model */,
 				3C4753A9243347D9009AE8E9 /* View */,
-				3C537B2E241DF8F000A1DB6B /* LaunchScreen.storyboard */,
+				3C4753AB2433484E009AE8E9 /* Controller */,
 				3C537B31241DF8F000A1DB6B /* Info.plist */,
+				3C537B2E241DF8F000A1DB6B /* LaunchScreen.storyboard */,
 			);
 			path = morningCall;
 			sourceTree = "<group>";

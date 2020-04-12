@@ -79,9 +79,7 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     cell.titleLabel.text = titleText[indexPath.row]
                     cell.subTitleLabel.text = "Default"
                     cell.selectionStyle = .none
-
                     return cell
-                    
                 case 3:
                         let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmSnoozeCell") as! AlarmSnoozeCell
                         cell.delegate = self
@@ -124,6 +122,7 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 return 0
             }
         }
+    
     @IBAction func saveButton(_ sender: Any) {
         alarmSet()
         delegate.AlarmMainVC(alarmAdd: self, alarmTime: alarmTime)
