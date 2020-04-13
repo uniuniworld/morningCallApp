@@ -15,6 +15,8 @@
 		3C537B2B241DF8EF00A1DB6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C537B29241DF8EF00A1DB6B /* Main.storyboard */; };
 		3C537B2D241DF8F000A1DB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C537B2C241DF8F000A1DB6B /* Assets.xcassets */; };
 		3C537B30241DF8F000A1DB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C537B2E241DF8F000A1DB6B /* LaunchScreen.storyboard */; };
+		3C8477912445035D004D49E2 /* AlarmAddLabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8477902445035D004D49E2 /* AlarmAddLabelVC.swift */; };
+		3C8477932445049A004D49E2 /* AlarmRepeatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8477922445049A004D49E2 /* AlarmRepeatVC.swift */; };
 		3CA6BB972434C61A00F58CEC /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6BB962434C61A00F58CEC /* Audio.swift */; };
 		3CA6BB992434C74800F58CEC /* AudioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6BB982434C74800F58CEC /* AudioVC.swift */; };
 		3CA6BB9C2434D37100F58CEC /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6BB9A2434D37100F58CEC /* RecordingCell.swift */; };
@@ -42,6 +44,8 @@
 		3C537B2C241DF8F000A1DB6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C537B2F241DF8F000A1DB6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C537B31241DF8F000A1DB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C8477902445035D004D49E2 /* AlarmAddLabelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmAddLabelVC.swift; sourceTree = "<group>"; };
+		3C8477922445049A004D49E2 /* AlarmRepeatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmRepeatVC.swift; sourceTree = "<group>"; };
 		3CA6BB962434C61A00F58CEC /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		3CA6BB982434C74800F58CEC /* AudioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVC.swift; sourceTree = "<group>"; };
 		3CA6BB9A2434D37100F58CEC /* RecordingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				3C537B2C241DF8F000A1DB6B /* Assets.xcassets */,
 				3CA6BB9A2434D37100F58CEC /* RecordingCell.swift */,
 				3CA6BB9B2434D37100F58CEC /* RecordingCell.xib */,
+				3C8477902445035D004D49E2 /* AlarmAddLabelVC.swift */,
+				3C8477922445049A004D49E2 /* AlarmRepeatVC.swift */,
 				3C4753B0243349A4009AE8E9 /* AlarmTimeCell.swift */,
 				3C4753B1243349A4009AE8E9 /* AlarmTimeCell.xib */,
 				3CF11893243B657C00E3EED9 /* AlarmSnoozeCell.swift */,
@@ -219,6 +225,8 @@
 				3C537B28241DF8EF00A1DB6B /* AlarmMainVC.swift in Sources */,
 				3CEECAC92430335100A793C4 /* AlarmSetVC.swift in Sources */,
 				3CA6BB992434C74800F58CEC /* AudioVC.swift in Sources */,
+				3C8477912445035D004D49E2 /* AlarmAddLabelVC.swift in Sources */,
+				3C8477932445049A004D49E2 /* AlarmRepeatVC.swift in Sources */,
 				3CA6BB9F243534EB00F58CEC /* CallCenter.swift in Sources */,
 				3CA6BB9C2434D37100F58CEC /* RecordingCell.swift in Sources */,
 				3CF11892243B549000E3EED9 /* AlarmTimeArray.swift in Sources */,

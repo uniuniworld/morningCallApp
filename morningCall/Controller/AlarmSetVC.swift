@@ -30,7 +30,8 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         datePicker.date = alarmTime.date
         registerCell(cellName: "AlarmSnoozeCell")
-
+        registerCell(cellName: "AlarmAddCell")
+        registerCell(cellName: "AlarmDeleteCell")
         tableView.tableFooterView = UIView()
     }
     // セル登録
@@ -62,41 +63,41 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
+        case 0:
+            switch indexPath.row{
             case 0:
-                switch indexPath.row{
-                case 0:
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmAddCell") as! AlarmAddCell
-                    cell.titleLabel.text = titleText[indexPath.row]
-                    cell.subTitleLabel.text = alarmTime.repeatLabel
-                    return cell
-                case 1:
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmAddCell") as! AlarmAddCell
-                    cell.titleLabel.text = titleText[indexPath.row]
-                    cell.subTitleLabel.text = alarmTime.label
-                    return cell
-                case 2:
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmAddCell") as! AlarmAddCell
-                    cell.titleLabel.text = titleText[indexPath.row]
-                    cell.subTitleLabel.text = "Default"
-                    cell.selectionStyle = .none
-                    return cell
-                case 3:
-                        let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmSnoozeCell") as! AlarmSnoozeCell
-                        cell.delegate = self
-                        cell.snoozeSwitch.isOn = alarmTime.snooze
-                        return cell
-                default:
-                    break
-                }
+                let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmAddCell") as! AlarmAddCell
+                cell.titleLabel.text = titleText[indexPath.row]
+                cell.subTitleLabel.text = alarmTime.repeatLabel
+                return cell
             case 1:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmDeleteCell") as! AlarmDeleteCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmAddCell") as! AlarmAddCell
+                cell.titleLabel.text = titleText[indexPath.row]
+                cell.subTitleLabel.text = alarmTime.label
+                return cell
+            case 2:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmAddCell") as! AlarmAddCell
+                cell.titleLabel.text = titleText[indexPath.row]
+                cell.subTitleLabel.text = "Default"
+                cell.selectionStyle = .none
+                return cell
+            case 3:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmSnoozeCell") as! AlarmSnoozeCell
                 cell.delegate = self
+                cell.snoozeSwitch.isOn = alarmTime.snooze
                 return cell
             default:
                 break
             }
-            return UITableViewCell()
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmDeleteCell") as! AlarmDeleteCell
+            cell.delegate = self
+            return cell
+            default:
+            break
         }
+        return UITableViewCell()
+    }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             switch indexPath.section {
@@ -125,7 +126,7 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func saveButton(_ sender: Any) {
         alarmSet()
-        delegate.AlarmMainVC(alarmAdd: self, alarmTime: alarmTime)
+        delegate.AlarmSetVC(alarmAdd: self, alarmTime: alarmTime)
         dismiss(animated: true, completion: nil)
     }
     
@@ -230,7 +231,7 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     @IBAction func cancelButton(_ sender: Any) {
-        delegate.AlarmAddVC(alarmCancel: self)
+        delegate.AlarmSetVC(alarmCancel: self)
         dismiss(animated: true, completion: nil)
     }
     
@@ -249,49 +250,49 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return
         }
     }
-    
-    extension AlarmAddVC:AlarmRepeatVCDelegate {
-        func AlarmRepeatVC(addRepeat: AlarmRepeatVC, week: [String]) {
-            alarmTime.week = []
-            alarmTime.repeatLabel = ""
-            alarmTime.week += week
-            if alarmTime.week.count == 1 {
-                alarmTime.repeatLabel = "Every"+alarmTime.week[0]
-            }else if alarmTime.week.isEmpty {
-                alarmTime.repeatLabel = "Never"
-            }else if alarmTime.week.count == 7{
-                alarmTime.repeatLabel = "Every day"
-            }else{
-                let shortWeekday = DateFormatter().shortWeekdaySymbols!
-                for i in alarmTime.week {
-                    if alarmTime.repeatLabel != "" {
-                        alarmTime.repeatLabel += ","
-                    }
-                alarmTime.repeatLabel += shortWeekday[weekDay(day: i)]
+}
+extension AlarmSetVC: AlarmRepeatVCDelegate {
+    func AlarmRepeatVC(addRepeat: AlarmRepeatVC, week: [String]) {
+        alarmTime.week = []
+        alarmTime.repeatLabel = ""
+        alarmTime.week += week
+        if alarmTime.week.count == 1 {
+            alarmTime.repeatLabel = "Every" + alarmTime.week[0]
+        }else if alarmTime.week.isEmpty {
+            alarmTime.repeatLabel = "Never"
+        }else if alarmTime.week.count == 7{
+            alarmTime.repeatLabel = "Every day"
+        }else{
+            let shortWeekday = DateFormatter().shortWeekdaySymbols!
+            for i in alarmTime.week {
+                if alarmTime.repeatLabel != "" {
+                    alarmTime.repeatLabel += ","
                 }
+            alarmTime.repeatLabel += shortWeekday[weekDay(day: i)]
             }
-            tableView.reloadData()
         }
-        
+        tableView.reloadData()
     }
+    
+}
 
-    extension AlarmAddVC:AlarmAddLabelDelegate {
-        func alarmAddLabel(labelText: AlarmAddLabelVC, text: String) {
-            alarmTime.label = text
-            tableView.reloadData()
-        }
-    }
-
-    extension AlarmAddVC:AlarmSnoozeCellDelegte{
-        func alarmSnoozeCell(swichOn: AlarmSnoozeCell, On: Bool) {
-            alarmTime.snooze = On
-        }
-    }
-
-    extension AlarmAddVC:AlarmDeleteCellDelegate{
-        func alarmDeleteCell(delete: UITableViewCell) {
-            delegate.AlarmAddVC(alarmDelete: self,alarmTime:alarmTime)
-            dismiss(animated: true, completion: nil)
-        }
+extension AlarmSetVC: AlarmAddLabelDelegate {
+    func alarmAddLabel(labelText: AlarmAddLabelVC, text: String) {
+        alarmTime.label = text
+        tableView.reloadData()
     }
 }
+
+extension AlarmSetVC: AlarmSnoozeCellDelegte{
+    func alarmSnoozeCell(swichOn: AlarmSnoozeCell, On: Bool) {
+        alarmTime.snooze = On
+    }
+}
+
+extension AlarmSetVC: AlarmDeleteCellDelegate{
+    func alarmDeleteCell(delete: UITableViewCell) {
+        delegate.AlarmSetVC(alarmDelete: self,alarmTime:alarmTime)
+        dismiss(animated: true, completion: nil)
+    }
+}
+

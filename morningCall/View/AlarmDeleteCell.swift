@@ -13,6 +13,9 @@ protocol AlarmDeleteCellDelegate {
 }
 
 class AlarmDeleteCell: UITableViewCell {
-    var delegate: AlarmAddDelegate!
+    var delegate: AlarmDeleteCellDelegate!
 
+    @IBAction func deleteButton(_ sender: Any) {
+        delegate.alarmDeleteCell(delete: self)
+    }
 }

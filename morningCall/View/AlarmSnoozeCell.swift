@@ -13,6 +13,10 @@ protocol AlarmSnoozeCellDelegte {
 }
 
 class AlarmSnoozeCell: UITableViewCell {
-    var delegate: AlarmAddDelegate!
-
+    var delegate: AlarmSnoozeCellDelegte!
+    @IBOutlet weak var snoozeSwitch: UISwitch!
+    @IBAction func switchChanged(_ sender: UISwitch) {
+        delegate.alarmSnoozeCell(swichOn: self, On: sender.isOn)
+    }
 }
+
