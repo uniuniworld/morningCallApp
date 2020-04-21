@@ -173,7 +173,7 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         dateComponents.hour = Calendar.current.component(.hour, from: datePicker.date)
         dateComponents.minute = Calendar.current.component(.minute, from: datePicker.date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: repeats)
-        let request = UNNotificationRequest(identifier: alarmTime.uuidString+day, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: alarmTime.uuidString + day, content: content, trigger: trigger)
 
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
@@ -188,7 +188,7 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         removeAlarm(identifiers: alarmTime.uuidString)
         let shortWeekday = DateFormatter().shortWeekdaySymbols!
         for i in shortWeekday {
-            removeAlarm(identifiers: alarmTime.uuidString+i)
+            removeAlarm(identifiers: alarmTime.uuidString + i)
         }
         if alarmTime.week.isEmpty {
             setCategories()
@@ -261,7 +261,7 @@ extension AlarmSetVC: AlarmRepeatVCDelegate {
             alarmTime.repeatLabel = "Every" + alarmTime.week[0]
         }else if alarmTime.week.isEmpty {
             alarmTime.repeatLabel = "Never"
-        }else if alarmTime.week.count == 7{
+        }else if alarmTime.week.count == 7 {
             alarmTime.repeatLabel = "Every day"
         }else{
             let shortWeekday = DateFormatter().shortWeekdaySymbols!
@@ -284,15 +284,15 @@ extension AlarmSetVC: AlarmAddLabelDelegate {
     }
 }
 
-extension AlarmSetVC: AlarmSnoozeCellDelegte{
+extension AlarmSetVC: AlarmSnoozeCellDelegte {
     func alarmSnoozeCell(swichOn: AlarmSnoozeCell, On: Bool) {
         alarmTime.snooze = On
     }
 }
 
-extension AlarmSetVC: AlarmDeleteCellDelegate{
+extension AlarmSetVC: AlarmDeleteCellDelegate {
     func alarmDeleteCell(delete: UITableViewCell) {
-        delegate.AlarmSetVC(alarmDelete: self,alarmTime:alarmTime)
+        delegate.AlarmSetVC(alarmDelete: self,alarmTime: alarmTime)
         dismiss(animated: true, completion: nil)
     }
 }

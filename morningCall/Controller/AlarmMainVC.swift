@@ -51,6 +51,32 @@ class AlarmMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
     }
     
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        tableView.setEditing(editing, animated: animated)
+
+    }
+    
+    func setCellLabel(index:Int) -> String{
+        if timeArray[index].repeatLabel == "Never" {
+            return timeArray[index].label
+
+        }else{
+            return timeArray[index].label+","+timeArray[index].repeatLabel
+        }
+    }
+    
+    func getAlarm(from uuid: String){
+        timeLoad()
+        guard let alarm = timeArray.first(where: { $0.uuidString == uuid }) else {return }
+        if alarm.week.isEmpty {
+            alarm.onOff = false
+        }
+        saveDate()
+        let center = UNUserNotificationCenter.current()
+        center.removeAllDeliveredNotifications()
+    }
+    
     // 表示するセルの数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return timeArray.count
@@ -60,16 +86,58 @@ class AlarmMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmTimeCell") as! AlarmTimeCell
         
-//        cell.timeLabel.text = getTime(date: timeArray[indexPath.row].date)
-//        cell.label.text = setCellLabel(index: indexPath.row)
-//        cell.sw.isOn = timeArray[indexPath.row].onOff
-//        cell.editingAccessoryType = .disclosureIndicator
+        cell.timeLabel.text = getTime(date: timeArray[indexPath.row].date)
+        cell.fromLabel.text = setCellLabel(index: indexPath.row)
+        cell.sw.isOn = timeArray[indexPath.row].onOff
+        cell.editingAccessoryType = .disclosureIndicator
 
         return cell
     }
     
     @IBAction func addButton(_ sender: Any) {
-        //self.performSegue(withIdentifier: "setAlarm", sender: nil)
+        self.performSegue(withIdentifier: "setAlarm", sender: nil)
+    }
+    
+    func getTime(date:Date) -> String {
+        let f = DateFormatter()
+        f.timeStyle = .short
+        f.locale = Locale(identifier: "ja_JP")
+        return f.string(from: date)
+    }
+    
+    func saveDate(){
+        let timeArrayData = try! NSKeyedArchiver.archivedData(withRootObject: timeArray, requiringSecureCoding: false)
+        userDefaults.set(timeArrayData, forKey: "timeArray")
+        userDefaults.synchronize()
+    }
+    
+    
+}
+
+extension AlarmMainVC:AlarmAddDelegate{
+    func AlarmSetVC(alarmAdd: AlarmSetVC, alarmTime: AlarmTimeArray) {
+        if tableView.isEditing {
+            timeArray[index] = alarmTime
+        }else{
+           timeArray.append(alarmTime)
+        }
+        timeArray.sort(){$0.date < $1.date}
+        saveDate()
+        self.setEditing(false, animated: false)
+        tableView.reloadData()
+    }
+    
+    func AlarmSetVC(alarmDelete: AlarmSetVC, alarmTime: AlarmTimeArray) {
+        self.setEditing(false, animated: false)
+        timeArray.remove(at: index)
+        saveDate()
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [timeArray[index].uuidString])
+
+    }
+    
+    func AlarmSetVC(alarmCancel:AlarmSetVC){
+        self.setEditing(false, animated: false)
     }
 }
+
 

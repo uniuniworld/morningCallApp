@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkName = "setCellLabel(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
