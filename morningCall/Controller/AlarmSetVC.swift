@@ -98,31 +98,31 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
-        
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            switch indexPath.section {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
             case 0:
-                switch indexPath.row {
-                case 0:
-                    self.performSegue(withIdentifier: "showRepeat", sender: nil)
-                case 1:
-                    performSegue(withIdentifier: "showLabel",sender: nil)
-                    break
-                case 2:break
-                default:break
-                }
-            default:
+                self.performSegue(withIdentifier: "showRepeat", sender: nil)
+            case 1:
+                performSegue(withIdentifier: "showLabel",sender: nil)
                 break
+            case 2:break
+            default:break
             }
+        default:
+            break
         }
+    }
         
-        public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            if section == 1 {
-                return 50
-            }else{
-                return 0
-            }
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 1 {
+            return 50
+        }else{
+            return 0
         }
+    }
     
     @IBAction func saveButton(_ sender: Any) {
         alarmSet()
@@ -251,6 +251,7 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
 extension AlarmSetVC: AlarmRepeatVCDelegate {
     func AlarmRepeatVC(addRepeat: AlarmRepeatVC, week: [String]) {
         alarmTime.week = []
