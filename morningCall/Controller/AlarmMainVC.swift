@@ -11,7 +11,7 @@ import UserNotifications
 
 class AlarmMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let alarm = Alarm()
+    static let alarm = Alarm()
     var appDelegate = UIApplication.shared
     @IBOutlet weak var tableView: UITableView!
     var userDefaults = UserDefaults.standard
@@ -25,15 +25,25 @@ class AlarmMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         tableView.allowsSelection = false
         tableView.register(UINib(nibName: "AlarmTimeCell", bundle: nil), forCellReuseIdentifier: "AlarmTimeCell")
         self.navigationItem.setLeftBarButton(self.editButtonItem, animated: true)
+        timeLoad()
         tableView.reloadData()
         NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-//        let <#変数名#> = segue.destination as! SetViewController
-//        
-//        <#変数名#>.<#値を渡す先の変数名#> = <#渡す値#>
-        
+        if segue.identifier == "setAlarm" {
+            guard let nvc = segue.destination as? UINavigationController else {
+                return
+            }
+            guard let vc = nvc.topViewController as? AlarmSetVC else {
+                return
+            }
+            vc.delegate = self
+            vc.isEdit = tableView.isEditing
+            if tableView.isEditing {
+                vc.alarmTime = timeArray[index]
+            }
+        }
     }
     
     @objc func methodOfReceivedNotification(notification: Notification) {
@@ -54,21 +64,22 @@ class AlarmMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         tableView.setEditing(editing, animated: animated)
-
     }
     
-    func setCellLabel(index:Int) -> String{
+    func setCellLabel(index:Int) -> String {
         if timeArray[index].repeatLabel == "Never" {
             return timeArray[index].label
 
-        }else{
-            return timeArray[index].label+","+timeArray[index].repeatLabel
+        } else {
+            return timeArray[index].label + "," + timeArray[index].repeatLabel
         }
     }
     
     func getAlarm(from uuid: String){
         timeLoad()
-        guard let alarm = timeArray.first(where: { $0.uuidString == uuid }) else {return }
+        guard let alarm = timeArray.first(where: { $0.uuidString == uuid }) else {
+            return
+        }
         if alarm.week.isEmpty {
             alarm.onOff = false
         }
