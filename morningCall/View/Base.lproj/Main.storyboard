@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uZc-tb-MJ1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uZc-tb-MJ1">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zhY-U3-T3t">
-                                <rect key="frame" x="0.0" y="56" width="375" height="197"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="196"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <locale key="locale" localeIdentifier="ja"/>
                             </datePicker>
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxr-ka-EGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="-236.13193403298354"/>
+            <point key="canvasLocation" x="649" y="-236"/>
         </scene>
         <!--Alarm-->
         <scene sceneID="AtJ-jU-aXt">
@@ -101,7 +101,7 @@
                     <navigationItem key="navigationItem" title="Alarm" id="P9M-xR-ryE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3qi-x8-bki">
                             <connections>
-                                <action selector="addButton:" destination="v6C-pW-mvk" id="eQw-2F-QdO"/>
+                                <action selector="addButton:" destination="v6C-pW-mvk" id="Eyb-aR-81m"/>
                                 <segue destination="8V6-Ry-rgO" kind="presentation" id="hiA-S6-bdv"/>
                             </connections>
                         </barButtonItem>
@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVg-zM-yvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="-900.00000000000011"/>
+            <point key="canvasLocation" x="649" y="-900"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ciL-5a-g8L">
