@@ -209,7 +209,7 @@ class AlarmSetVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //曜日
     func weekDay(day:String) -> Int{
-        var week = DateFormatter().weekdaySymbols!
+        let week = DateFormatter().weekdaySymbols!
         switch day {
         case week[0]:
             return 1

@@ -29,7 +29,7 @@ class AlarmRepeatVC: UIViewController ,UITableViewDelegate,UITableViewDataSource
     }
     
     func sortWeek(selectDays: [String]) ->  [String]{
-        var week = DateFormatter().weekdaySymbols!
+        let week = DateFormatter().weekdaySymbols!
         var dayDictionary: [String: Int] = [:]
         for i in 0...6 {
             dayDictionary[week[i]] = i
